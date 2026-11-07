@@ -1,0 +1,46 @@
+# How CODEOWNERS teams map to Switch rooms for this retirement.
+#
+# `scripts/build_template.py` reads discovery.json plus this file and writes the
+# v2 template. Teams not listed here get a Mattermost room named after their
+# handle. A team with `chat_app: Telegram` is NOT created by the template
+# (Telegram bots cannot create chats): make the group in Telegram, add the
+# Switch bot, and the room's name here must match the room Switch adopted.
+endpoint: pkg/bus
+repo: https://github.com/grafana/grafana
+# Every PR (per-team migrations and the removal) is opened on this fork, never upstream.
+# Confirm the fork exists under the user's GitHub account before the first rehearsal.
+fork: https://github.com/Manvith-Shetty/grafana
+pattern: 'github.com/grafana/grafana/pkg/bus"'
+replacement: direct service calls (inject the service, call its method) instead of bus.Publish / AddEventListener
+target_date: "2027-03-31"
+include: ["pkg/**/*.go"]
+exclude: ["**/*_test.go"]
+declaring: ["pkg/bus/**"]
+
+teams:
+  "@grafana/grafana-backend-services-squad":
+    short: backend-services
+    display: Backend Services
+  "@grafana/alerting-squad":
+    short: alerting
+    display: Alerting
+  "@grafana/grafana-search-and-storage":
+    short: search-storage
+    display: Search & Storage
+    # Plays the team that cannot make the date in the demo.
+  "@grafana/datapro":
+    short: datapro
+    display: Data Pro
+  "@grafana/grafana-catalog":
+    short: catalog
+    display: Catalog
+  "@grafana/grafana-operator-experience-squad":
+    short: operator-experience
+    display: Operator Experience
+  "@grafana/identity-squad":
+    short: identity
+    display: Identity
+    chat_app: Telegram
+    # Pre-created Telegram group; Dusk joins it via `join:`.
+    # Must match the room's name in Console → Your Rooms exactly (the adopted Telegram group).
+    room_name: "Identity Team"
