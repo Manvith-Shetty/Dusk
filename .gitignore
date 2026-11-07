@@ -6,10 +6,10 @@ docs/submission.md
 dist/fixer.instructions.md
 
 # runtime files Dusk writes into its working directory (this checkout)
-state.json
-state.json.tmp
-discovery.json
-discovery.md
+/state.json
+/state.json.tmp
+/discovery.json
+/discovery.md
 .cache/
 work/
 .switch/
