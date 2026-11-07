@@ -1,0 +1,166 @@
+{
+  "repo": "https://github.com/grafana/grafana",
+  "endpoint": "pkg/bus",
+  "pattern": "github.com/grafana/grafana/pkg/bus\"",
+  "commit": "87a1a1deb8f3978c9d69d9240c1d4aa5b0b332c8",
+  "scanned_at": "2026-11-06T10:58:17Z",
+  "elapsed_s": 27.31,
+  "includes": [
+    "pkg/**/*.go"
+  ],
+  "excludes": [
+    "**/*_test.go"
+  ],
+  "codeowners_source": ".github/CODEOWNERS",
+  "call_sites": 20,
+  "files": 20,
+  "teams": [
+    {
+      "team": "@grafana/grafana-backend-services-squad",
+      "files": [
+        "pkg/api/http_server.go",
+        "pkg/server/bootstrap/wire/sets.go",
+        "pkg/server/bootstrap/wire/wire_gen.go",
+        "pkg/server/wire_core.go",
+        "pkg/server/wire_gen.go",
+        "pkg/server/wire_subinject_oss.go",
+        "pkg/services/notifications/notifications.go"
+      ],
+      "call_sites": 7,
+      "samples": [
+        {
+          "file": "pkg/api/http_server.go",
+          "line": 38,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        },
+        {
+          "file": "pkg/server/bootstrap/wire/sets.go",
+          "line": 20,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        },
+        {
+          "file": "pkg/server/bootstrap/wire/wire_gen.go",
+          "line": 17,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        }
+      ]
+    },
+    {
+      "team": "@grafana/alerting-squad",
+      "files": [
+        "pkg/services/ngalert/ngalert.go",
+        "pkg/services/ngalert/store/folderlabelsyncer/service.go",
+        "pkg/services/ngalert/tests/util.go",
+        "pkg/services/ngalert/testutil/testutil.go"
+      ],
+      "call_sites": 4,
+      "samples": [
+        {
+          "file": "pkg/services/ngalert/ngalert.go",
+          "line": 30,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        },
+        {
+          "file": "pkg/services/ngalert/store/folderlabelsyncer/service.go",
+          "line": 30,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        },
+        {
+          "file": "pkg/services/ngalert/tests/util.go",
+          "line": 16,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        }
+      ]
+    },
+    {
+      "team": "@grafana/grafana-search-and-storage",
+      "files": [
+        "pkg/services/sqlstore/sqlstore.go",
+        "pkg/services/sqlstore/sqlstore_testinfra.go",
+        "pkg/services/sqlstore/transactions.go",
+        "pkg/storage/legacysql/legacywatch/publisher.go"
+      ],
+      "call_sites": 4,
+      "samples": [
+        {
+          "file": "pkg/services/sqlstore/sqlstore.go",
+          "line": 24,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        },
+        {
+          "file": "pkg/services/sqlstore/sqlstore_testinfra.go",
+          "line": 21,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        },
+        {
+          "file": "pkg/services/sqlstore/transactions.go",
+          "line": 11,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        }
+      ]
+    },
+    {
+      "team": "@grafana/datapro",
+      "files": [
+        "pkg/services/correlations/correlationstest/fake.go",
+        "pkg/services/correlations/provider.go"
+      ],
+      "call_sites": 2,
+      "samples": [
+        {
+          "file": "pkg/services/correlations/correlationstest/fake.go",
+          "line": 7,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        },
+        {
+          "file": "pkg/services/correlations/provider.go",
+          "line": 9,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        }
+      ]
+    },
+    {
+      "team": "@grafana/grafana-catalog",
+      "files": [
+        "pkg/services/plugindashboards/service/dashboard_updater.go"
+      ],
+      "call_sites": 1,
+      "samples": [
+        {
+          "file": "pkg/services/plugindashboards/service/dashboard_updater.go",
+          "line": 8,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        }
+      ]
+    },
+    {
+      "team": "@grafana/grafana-operator-experience-squad",
+      "files": [
+        "pkg/extensions/enterprise_imports.go"
+      ],
+      "call_sites": 1,
+      "samples": [
+        {
+          "file": "pkg/extensions/enterprise_imports.go",
+          "line": 166,
+          "text": "_ \"github.com/grafana/grafana/pkg/bus\""
+        }
+      ]
+    },
+    {
+      "team": "@grafana/identity-squad",
+      "files": [
+        "pkg/services/serviceaccounts/extsvcaccounts/service.go"
+      ],
+      "call_sites": 1,
+      "samples": [
+        {
+          "file": "pkg/services/serviceaccounts/extsvcaccounts/service.go",
+          "line": 11,
+          "text": "\"github.com/grafana/grafana/pkg/bus\""
+        }
+      ]
+    }
+  ],
+  "declaring_files": []
+}
