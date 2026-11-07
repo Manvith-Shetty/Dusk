@@ -1,0 +1,21 @@
+# private planning notes and working files
+notes/
+PROGRESS.md
+docs/submission.md
+.claude/
+dist/fixer.instructions.md
+
+# runtime files Dusk writes into its working directory (this checkout)
+state.json
+state.json.tmp
+discovery.json
+discovery.md
+.cache/
+work/
+.switch/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
